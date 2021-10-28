@@ -1,0 +1,21 @@
+<div class="">
+
+    <button class="btn" (click)="showIssues('open')">Show Open Issues</button>
+    <button class="btn" (click)="showIssues('closed')">Show Open Issues</button>
+</div>
+<div>Open - <span>{{openCount}}</span></div>
+<div>Closed - <span>{{closedCount}}</span></div>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Issue Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of rows">
+            <td>{{item.sno}}</td>
+            <td>{{item.issueName}}</td>
+        </tr>
+    </tbody>
+</table>
